@@ -59,7 +59,7 @@ namespace Main
                         Ellipse ellipse = new Ellipse(4.5, 3.3);
 
                         Figure[] figuresBox = new Figure[] { triangle, ring, square, ellipse, rectangle };
-                        foreach(Figure value in figuresBox)
+                        foreach (Figure value in figuresBox)
                         {
                             value.ShowInfo();
                         }
@@ -97,7 +97,7 @@ namespace Main
                         Console.WriteLine("View furniture");
                         foreach (Furniture s in furnitureList)
                         {
-                            Console.WriteLine(s.FurnitureType+ "\n");
+                            Console.WriteLine(s.FurnitureType + "\n");
                         }
 
                         Console.WriteLine("View material");
@@ -109,7 +109,7 @@ namespace Main
 
                     case 5:
                         double cost = 0;
-                        
+
                         object[] bouquet = new Flower[5];
 
                         bouquet[0] = new Rose("yellow");
@@ -118,7 +118,7 @@ namespace Main
                         bouquet[3] = new Tulip("blue");
                         bouquet[4] = new Rose("red");
 
-                        foreach(Flower s in bouquet)
+                        foreach (Flower s in bouquet)
                         {
                             cost = cost + s.Cost;
                         }
@@ -136,6 +136,6 @@ namespace Main
             } while (true);
 
         }
-        
+
     }
 }

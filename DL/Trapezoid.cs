@@ -19,10 +19,10 @@ namespace DL
     public class Trapezoid
     {
 
-       public Point Alpha { get; set; }
-       public Point Bravo { get; set; }
-       public Point Charlie { get; set; }
-       public Point Delta { get; set; }
+        public Point Alpha { get; set; }
+        public Point Bravo { get; set; }
+        public Point Charlie { get; set; }
+        public Point Delta { get; set; }
 
         public Trapezoid(Point alpha, Point bravo, Point charlie, Point delta)
         {
@@ -77,7 +77,7 @@ namespace DL
             get { return midLine; }
             set
             {
-                midLine = value; 
+                midLine = value;
             }
         }
         public double Side(Point p1, Point p2)
@@ -91,11 +91,11 @@ namespace DL
             get { return side1; }
             set
             {
-                side1 = value;           
+                side1 = value;
             }
         }
 
-        private double side2; 
+        private double side2;
         public double Side2
         {
             get { return side2; }
@@ -110,7 +110,7 @@ namespace DL
             return TopLine + BotLine + Side1 + Side2;
         }
 
-        public double Area ()
+        public double Area()
         {
             return MidLine * Height;
         }

@@ -17,7 +17,7 @@ namespace DL
             Manufacturer = manufacturer;
         }
         public string FurnitureType { get; set; }
-        public string Colour { get; set;}
+        public string Colour { get; set; }
         public double Size { get; set; }
         public double Weight { get; set; }
         public string Manufacturer { get; set; }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DL
 {
-   public abstract class Figure
+    public abstract class Figure
     {
         protected const double pi = 3.14;
         public double OutlineLength { get; set; }
         public double Area { get; set; }
         public abstract void ShowInfo();
     }
-    
+
     public class Triangle : Figure
     {
         public Triangle(double side1, double side2, double side3)
@@ -35,17 +35,17 @@ namespace DL
             Console.WriteLine($"{nameof(Triangle)}\nFirst side = {Side1}, second side = {Side2}, third side = {Side3}.\nPerimeter = {OutlineLength}, area = {Area}.\n");
         }
     }
-   
+
     public class Ring : Figure
     {
-        
+
         public Ring(double radius)
         {
-            Radius = radius;           
-            OutlineLength = 2 * Radius * pi;            
+            Radius = radius;
+            OutlineLength = 2 * Radius * pi;
             Area = Math.Pow(Radius, 2) * pi;
         }
-        public double Radius { get; set; }    
+        public double Radius { get; set; }
 
         public override void ShowInfo()
         {

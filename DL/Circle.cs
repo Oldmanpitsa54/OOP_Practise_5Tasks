@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
- 
+
 namespace DL
 {
-    
-   public class Circle
+
+    public class Circle
     {
         public const double pi = 3.14;
         public Circle(Point center, double radius)
@@ -21,7 +21,7 @@ namespace DL
         public double Length { get; set; }
         public double Radius { get; set; }
         public double Area { get; set; }
-            
+
         public static bool Compare(Circle c1, Circle c2)
         {
             if (c1.Area == c2.Area)
