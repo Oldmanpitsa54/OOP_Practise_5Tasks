@@ -70,5 +70,23 @@ namespace DL
                 output = ulong.Parse(input);
             }
         }
+
+        public static void ListCountCheck(string input, out int output, int counter)
+        {
+
+            while (true)
+            {
+                Int_Digits_check(input, out output);
+                if (output + 1 > counter)
+                {
+                    Console.WriteLine("Invalid value (out of available amount). Try again.");
+                    input = Console.ReadLine();
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
     }
 }

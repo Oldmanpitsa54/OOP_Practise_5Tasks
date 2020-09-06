@@ -15,7 +15,7 @@ namespace Main
             string input;
             do
             {
-                Console.Write("Choose the task: \n1) Trapezoid \n2) Circles \n3) Figures \n4) Furniture store \n5) Flowers \n 6) Exit \nYour choice: ");
+                Console.Write("Choose the task: \n1) Trapezoid \n2) Circles \n3) Figures \n4) Furniture store \n5) Flowers \n6) Exit \nYour choice: ");
                 input = Console.ReadLine();
                 Validation.Ulong_Digits_check(input, out cases);
                 switch (cases)
@@ -63,6 +63,67 @@ namespace Main
                         {
                             value.ShowInfo();
                         }
+                        break;
+
+                    case 4:
+                        int deletable;
+                        List<Furniture> furnitureList = new List<Furniture>();
+                        List<Material> materialList = new List<Material>();
+
+                        Furniture desk = new Furniture("table", "redwood", 4, 40, "GLEk_inc");
+                        Furniture hotchair = new Furniture("chair", "yellow", 1, 15, "GLEk_inc");
+                        Furniture kresloDlyaBaty = new Furniture("sofa", "green", 1.5, 47.5, "Batya industries");
+
+                        Material wood = new Material(500, 10000);
+                        Material weed = new Material(15, 2000);
+
+                        furnitureList.Add(desk);
+                        furnitureList.Add(kresloDlyaBaty);
+                        furnitureList.Add(hotchair);
+
+                        materialList.Add(weed);
+                        materialList.Add(wood);
+
+                        Console.Write("Delete material №: ");
+                        input = Console.ReadLine();
+                        Validation.ListCountCheck(input, out deletable, materialList.Count);
+                        materialList.RemoveAt(deletable - 1);
+
+                        Console.Write("Delete furniture №: ");
+                        input = Console.ReadLine();
+                        Validation.ListCountCheck(input, out deletable, furnitureList.Count);
+                        furnitureList.RemoveAt(deletable - 1);
+
+                        Console.WriteLine("View furniture");
+                        foreach (Furniture s in furnitureList)
+                        {
+                            Console.WriteLine(s.FurnitureType+ "\n");
+                        }
+
+                        Console.WriteLine("View material");
+                        foreach (Material s in materialList)
+                        {
+                            Console.WriteLine(s.Cost + "\n");
+                        }
+                        break;
+
+                    case 5:
+                        double cost = 0;
+                        
+                        object[] bouquet = new Flower[5];
+
+                        bouquet[0] = new Rose("yellow");
+                        bouquet[1] = new Carnation("blue");
+                        bouquet[2] = new Tulip("white");
+                        bouquet[3] = new Tulip("blue");
+                        bouquet[4] = new Rose("red");
+
+                        foreach(Flower s in bouquet)
+                        {
+                            cost = cost + s.Cost;
+                        }
+
+                        Console.WriteLine($"This bouquet costs {cost} c.u. \n");
                         break;
 
                     case 6:
